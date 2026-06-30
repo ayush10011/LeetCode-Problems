@@ -5,36 +5,47 @@ class Solution:
         ans = []
 
         for i in range(n - 3):
-            # Skip duplicate first elements
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
+            # Minimum possible sum
+            if nums[i] + nums[i+1] + nums[i+2] + nums[i+3] > target:
+                break
+
+            # Maximum possible sum
+            if nums[i] + nums[n-1] + nums[n-2] + nums[n-3] < target:
+                continue
+
             for j in range(i + 1, n - 2):
-                # Skip duplicate second elements
                 if j > i + 1 and nums[j] == nums[j - 1]:
                     continue
 
-                left = j + 1
-                right = n - 1
+                # Minimum possible sum
+                if nums[i] + nums[j] + nums[j+1] + nums[j+2] > target:
+                    break
 
-                while left < right:
-                    total = nums[i] + nums[j] + nums[left] + nums[right]
+                # Maximum possible sum
+                if nums[i] + nums[j] + nums[n-1] + nums[n-2] < target:
+                    continue
 
-                    if total == target:
-                        ans.append([nums[i], nums[j], nums[left], nums[right]])
+                l, r = j + 1, n - 1
 
-                        left += 1
-                        right -= 1
+                while l < r:
+                    s = nums[i] + nums[j] + nums[l] + nums[r]
 
-                        # Skip duplicates
-                        while left < right and nums[left] == nums[left - 1]:
-                            left += 1
-                        while left < right and nums[right] == nums[right + 1]:
-                            right -= 1
+                    if s == target:
+                        ans.append([nums[i], nums[j], nums[l], nums[r]])
+                        l += 1
+                        r -= 1
 
-                    elif total < target:
-                        left += 1
+                        while l < r and nums[l] == nums[l - 1]:
+                            l += 1
+                        while l < r and nums[r] == nums[r + 1]:
+                            r -= 1
+
+                    elif s < target:
+                        l += 1
                     else:
-                        right -= 1
+                        r -= 1
 
         return ans
