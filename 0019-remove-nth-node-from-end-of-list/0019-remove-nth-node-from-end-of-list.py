@@ -5,19 +5,20 @@
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head, n):
-        dummy = ListNode(0, head)
-        fast = slow = dummy
+        fast = head
 
-        # Move fast n+1 steps ahead
-        for _ in range(n + 1):
+        # Move fast n steps ahead
+        for _ in range(n):
             fast = fast.next
 
-        # Move both pointers
-        while fast:
+        # Remove the head node
+        if not fast:
+            return head.next
+
+        slow = head
+        while fast.next:
             fast = fast.next
             slow = slow.next
 
-        # Remove the nth node from the end
         slow.next = slow.next.next
-
-        return dummy.next
+        return head
