@@ -1,16 +1,12 @@
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: list[list[int]]) -> int:
-        m, n = len(obstacleGrid), len(obstacleGrid[0])
+        dp = [1] + [0] * (len(obstacleGrid[0]) - 1)
 
-        # dp[j] = number of ways to reach the current cell in column j
-        dp = [0] * n
-        dp[0] = 1
-
-        for i in range(m):
-            for j in range(n):
-                if obstacleGrid[i][j] == 1:
+        for row in obstacleGrid:
+            for j, cell in enumerate(row):
+                if cell:
                     dp[j] = 0
-                elif j > 0:
+                elif j:
                     dp[j] += dp[j - 1]
 
-        return dp[n - 1]
+        return dp[-1]
