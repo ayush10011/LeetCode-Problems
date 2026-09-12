@@ -42,6 +42,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0068-text-justification](https://github.com/ayush10011/LeetCode-Problems/tree/master/0068-text-justification) |
 | [0073-set-matrix-zeroes](https://github.com/ayush10011/LeetCode-Problems/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/ayush10011/LeetCode-Problems/tree/master/0074-search-a-2d-matrix) |
+| [0078-subsets](https://github.com/ayush10011/LeetCode-Problems/tree/master/0078-subsets) |
 ## Hash Table
 |  |
 | ------- |
@@ -206,6 +207,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0051-n-queens](https://github.com/ayush10011/LeetCode-Problems/tree/master/0051-n-queens) |
 | [0052-n-queens-ii](https://github.com/ayush10011/LeetCode-Problems/tree/master/0052-n-queens-ii) |
 | [0077-combinations](https://github.com/ayush10011/LeetCode-Problems/tree/master/0077-combinations) |
+| [0078-subsets](https://github.com/ayush10011/LeetCode-Problems/tree/master/0078-subsets) |
 ## Stack
 |  |
 | ------- |
@@ -230,6 +232,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0029-divide-two-integers](https://github.com/ayush10011/LeetCode-Problems/tree/master/0029-divide-two-integers) |
 | [0067-add-binary](https://github.com/ayush10011/LeetCode-Problems/tree/master/0067-add-binary) |
+| [0078-subsets](https://github.com/ayush10011/LeetCode-Problems/tree/master/0078-subsets) |
 ## Matrix
 |  |
 | ------- |
